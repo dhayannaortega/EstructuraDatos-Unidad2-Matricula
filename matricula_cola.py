@@ -26,13 +26,13 @@ class ColaProcesamientoMatricula:
 
   def encolar (self,solicitud):
       if self.esta_llena() ==True:
-        print  ("SERVIDOR OCUPADO: No se pudo procesar a" +solicitud.nombre)
+        print("SERVIDOR OCUPADO: No se pudo procesar a" + solicitud.nombre)
         return False
 
       posicion = (self.frente + self.tamano) % self.capacidad
       self.datos[posicion] = solicitud
       self.tamano = self.tamano + 1
-      print("INGRESO EXITOSO:" + solicitud.nombre + "entro a la cola")
+      print("INGRESO EXITOSO: " + solicitud.nombre + " entro a la cola ")
       return True
 
   def desencolar(self):
@@ -45,7 +45,7 @@ class ColaProcesamientoMatricula:
       self.frente = (self.frente + 1) % self.capacidad
       self.tamano = self.tamano - 1
 
-      print ("LIQUIDACION GENERADA: Estudiante" + solicitud_procesada.nombre +" - Documento: " + solicitud_procesada.documento)
+      print("LIQUIDACION GENERADA: Estudiante " + solicitud_procesada.nombre +" - Documento: " + solicitud_procesada.documento)
       return solicitud_procesada
 
 if __name__ == "__main__":
