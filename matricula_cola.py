@@ -66,7 +66,7 @@ if __name__ == "__main__":
       servidor_matriculas.encolar (est3)
 
       print("\nPRUEBA SERVIDOR LLENO")
-      est4 = SolicitudMatricula ("1090654385", "Martha Camacho", "Contaduria publica", 1800000)
+      est4 = SolicitudMatricula ("1090654385", " Martha Camacho", "Contaduria publica", 1800000)
       servidor_matriculas.encolar (est4)
 
       print("\nPROCESAR Y GENERAR LIQUIDACION")
